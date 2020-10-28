@@ -1,0 +1,54 @@
+{
+    "identifier": "novov.searchdocs",
+    "name": "Search Docs",
+    "organization": "novov",
+    "description": "Find documentation for a selected term.",
+    "version": "0.2.1",
+    "categories": ["commands"],
+    "bugs": "https://github.com/mirnovov/searchdocs/issues",
+    "repository": "https://github.com/mirnovov/searchdocs",
+    "license": "MIT",
+    
+    "main": "main.js",
+    
+    "entitlements": {
+        
+    },
+    
+    "commands": {
+        "editor": [
+            {
+                "title": "Search Docs...",
+                "command": "novov.searchdocs.search",
+                "when": "editorHasSelection",
+                "shortcut": "cmd-@"
+            }
+        ]
+    },
+    
+    "config": [
+        {
+            "title": "Syntax sources",
+            "description": "Choose what documentation to use for languages.",
+            "type": "section",
+            "children": [
+                
+                {
+                    "key": "novov.searchdocs.python",
+                    "title": "Python",
+                    "type": "enum",
+                    "values": ["3.x", "2.x"],
+                    "default": "3.x"
+                    
+                },
+                {
+                    "key": "novov.searchdocs.sql",
+                    "title": "SQL",
+                    "type": "enum",
+                    "values": ["MariaDB", "Microsoft SQL", "MySQL"],
+                    "default": "MariaDB"
+                }
+            ]    
+        }
+    ]
+}
