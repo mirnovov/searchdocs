@@ -3,7 +3,7 @@
     "name": "Search Docs",
     "organization": "novov",
     "description": "Find documentation for a selected term.",
-    "version": "0.2.1",
+    "version": "0.3",
     "categories": ["commands"],
     "bugs": "https://github.com/mirnovov/searchdocs/issues",
     "repository": "https://github.com/mirnovov/searchdocs",
@@ -21,7 +21,12 @@
                 "title": "Search Docs...",
                 "command": "novov.searchdocs.search",
                 "when": "editorHasSelection",
-                "shortcut": "cmd-@"
+                "shortcut": "cmd-@",
+                "filters": {
+                    "syntaxes": ["javascript", "html", "css", "sass", "scss",
+                        "less", "xml", "vue", "typescript", "python",
+                        "php", "ruby", "perl", "shell"]
+                }
             }
         ]
     },
